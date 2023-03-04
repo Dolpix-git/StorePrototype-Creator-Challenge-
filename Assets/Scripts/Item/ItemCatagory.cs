@@ -1,3 +1,6 @@
-public enum ItemCatagory {
+using System;
 
+[Serializable]
+public enum ItemCatagory {
+    Resources
 }

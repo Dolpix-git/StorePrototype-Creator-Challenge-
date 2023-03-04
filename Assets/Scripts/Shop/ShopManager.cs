@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour{
     #region Private.
-    [SerializeField]
-    private List<ItemScriptableObject> shopItems = new List<ItemScriptableObject>();
+    [SerializeField] private List<ItemScriptableObject> shopItems = new List<ItemScriptableObject>();
     private Shop currentShop = new Shop();
     #endregion
     #region Getters Setters.
@@ -29,7 +28,14 @@ public class ShopManager : MonoBehaviour{
 
     #region Methods.
     private void NextShop() {
+        Debug.Log("Calling for next shop");
         currentShop.GenerateShop();
+    }
+    public void BuyItem(ItemScriptableObject item, int amount) {
+        currentShop.BuyItem(item,amount);
+    }  
+    public void SellItem(ItemScriptableObject item, int amount) {
+        currentShop.SellItem(item, amount);
     }
     #endregion
 }
