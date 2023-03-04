@@ -4,6 +4,7 @@ using UnityEngine;
 public class ItemScriptableObject : ScriptableObject {
     public string itemName;
     public float itemCost;
+    public float itemSell;
     public ItemCatagory itemCatagory;
     public float itemRarity;
     public int itemMaxStack;

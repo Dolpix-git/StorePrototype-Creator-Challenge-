@@ -4,8 +4,20 @@ public class ItemStackableObject{
     private ItemScriptableObject item;
     private int itemAmount;
 
+    public ItemStackableObject(ItemScriptableObject item) {
+        this.item = item;
+    }
+
+    public ItemScriptableObject Item { get => item; }
+
     public bool IsEmpty() {
         if (itemAmount <= 0) {
+            return true;
+        }
+        return false;
+    }
+    public bool IsFull() {
+        if (itemAmount >= item.itemMaxStack) {
             return true;
         }
         return false;
